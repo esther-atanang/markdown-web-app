@@ -47,6 +47,7 @@
   border: none;
   font-size: 1rem;
   padding-bottom: 0.2rem;
+  min-width: 80px;
   outline: none;
   color: white;
   pointer-events: none;
@@ -163,17 +164,19 @@ nav .current {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 0.8rem;
+  padding: 0rem 1.2rem;
 }
 nav .current .the-file {
   display: flex;
   align-items: center;
   -moz-column-gap: 15px;
        column-gap: 15px;
-  width: 100% h2;
-  width-color: white;
-  width-font-weight: 400;
-  width-font-size: 0.95rem;
+  width: 100%;
+}
+nav .current .the-file h2 {
+  color: white;
+  font-weight: 400;
+  font-size: 0.95rem;
 }
 nav .current .the-file p {
   color: var(--pre-line);
@@ -493,6 +496,14 @@ Also needed for space (tweak if needed) */
   color: white;
 }
 
+@media screen and (max-width: 500px) {
+  .markdown textarea {
+    height: 75vh;
+  }
+  .preview-markdown {
+    height: 75vh;
+  }
+}
 @media screen and (max-width: 900px) {
   .markdown textarea {
     height: 92vh;
